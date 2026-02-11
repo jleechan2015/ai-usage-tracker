@@ -65,7 +65,7 @@ if command -v ccusage &> /dev/null; then
     CCUSAGE_VERSION=$(ccusage --version 2>&1 || echo "unknown")
     print_warning "ccusage is already installed (${CCUSAGE_VERSION})"
     echo ""
-    read -p "Do you want to reinstall ccusage? (y/N): " -n 1 -r
+    read -p "Do you want to reinstall ccusage? (y/N): " -n 1 -r || true
     echo ""
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         print_status "Reinstalling ccusage..."
@@ -87,7 +87,7 @@ if command -v ccusage-codex &> /dev/null; then
     CCUSAGE_CODEX_VERSION=$(ccusage-codex --version 2>&1 || echo "unknown")
     print_warning "ccusage-codex is already installed (${CCUSAGE_CODEX_VERSION})"
     echo ""
-    read -p "Do you want to reinstall ccusage-codex? (y/N): " -n 1 -r
+    read -p "Do you want to reinstall ccusage-codex? (y/N): " -n 1 -r || true
     echo ""
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         print_status "Reinstalling ccusage-codex..."
